@@ -1,2 +1,2 @@
 hello world
-conflict_1
+conflict_2
