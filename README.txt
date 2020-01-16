@@ -1,3 +1,4 @@
 hello world
-conflict_1
-different line
+hello worl
+conflict_4
+another line
