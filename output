@@ -1,0 +1,75 @@
+image_summary:
+  digest: sha256:4dc423b5dddb91eb6400bb3cb10675e67c39da577f517efbcfd93692d543c324
+  fully_qualified_digest: us-west2-docker.pkg.dev/jialu-test-gke-policy/quickstart-docker-repo/quickstart-image@sha256:4dc423b5dddb91eb6400bb3cb10675e67c39da577f517efbcfd93692d543c324
+  registry: us-west2-docker.pkg.dev
+  repository: quickstart-docker-repo
+provenance_summary:
+  provenance:
+  - build:
+      intotoStatement:
+        _type: https://in-toto.io/Statement/v0.1
+        predicateType: https://slsa.dev/provenance/v0.1
+        slsaProvenance:
+          builder:
+            id: https://cloudbuild.googleapis.com/GoogleHostedWorker@v0.3
+          materials:
+          - digest:
+              sha1: b96eb6aa42b539b3eefc9c9332465b00457755cd
+            uri: https://github.com/jialur/github-test
+          metadata:
+            buildFinishedOn: '2023-01-11T20:37:49.976610Z'
+            buildInvocationId: b62b0242-94f6-4164-b5e6-228a5d84b95c
+            buildStartedOn: '2023-01-11T20:37:41.846666581Z'
+          recipe:
+            arguments:
+              '@type': type.googleapis.com/google.devtools.cloudbuild.v1.Build
+              id: b62b0242-94f6-4164-b5e6-228a5d84b95c
+              name: projects/1069319903351/locations/us-west2/builds/b62b0242-94f6-4164-b5e6-228a5d84b95c
+              options:
+                dynamicSubstitutions: true
+                logging: LEGACY
+                pool: {}
+                requestedVerifyOption: VERIFIED
+                substitutionOption: ALLOW_LOOSE
+              sourceProvenance: {}
+              steps:
+              - args:
+                - build
+                - -t
+                - us-west2-docker.pkg.dev/jialu-test-gke-policy/quickstart-docker-repo/quickstart-image:tag1
+                - .
+                name: gcr.io/cloud-builders/docker
+                pullTiming:
+                  endTime: '2023-01-11T20:37:45.051934468Z'
+                  startTime: '2023-01-11T20:37:45.046909112Z'
+                status: SUCCESS
+                timing:
+                  endTime: '2023-01-11T20:37:47.648321634Z'
+                  startTime: '2023-01-11T20:37:45.046909112Z'
+              substitutions:
+                BRANCH_NAME: main
+                COMMIT_SHA: b96eb6aa42b539b3eefc9c9332465b00457755cd
+                REF_NAME: main
+                REPO_NAME: github-test
+                REVISION_ID: b96eb6aa42b539b3eefc9c9332465b00457755cd
+                SHORT_SHA: b96eb6a
+                TRIGGER_BUILD_CONFIG_PATH: cloudbuild.yaml
+                TRIGGER_NAME: Github-trigger
+            entryPoint: cloudbuild.yaml
+            type: https://cloudbuild.googleapis.com/CloudBuildYaml@v0.1
+        subject:
+        - digest:
+            sha256: 4dc423b5dddb91eb6400bb3cb10675e67c39da577f517efbcfd93692d543c324
+          name: https://us-west2-docker.pkg.dev/jialu-test-gke-policy/quickstart-docker-repo/quickstart-image:tag1
+    createTime: '2023-01-11T20:37:52.310501Z'
+    envelope:
+      payload: eyJfdHlwZSI6Imh0dHBzOi8vaW4tdG90by5pby9TdGF0ZW1lbnQvdjAuMSIsInByZWRpY2F0ZSI6eyJidWlsZGVyIjp7ImlkIjoiaHR0cHM6Ly9jbG91ZGJ1aWxkLmdvb2dsZWFwaXMuY29tL0dvb2dsZUhvc3RlZFdvcmtlckB2MC4zIn0sIm1hdGVyaWFscyI6W3siZGlnZXN0Ijp7InNoYTEiOiJiOTZlYjZhYTQyYjUzOWIzZWVmYzljOTMzMjQ2NWIwMDQ1Nzc1NWNkIn0sInVyaSI6Imh0dHBzOi8vZ2l0aHViLmNvbS9qaWFsdXIvZ2l0aHViLXRlc3QifV0sIm1ldGFkYXRhIjp7ImJ1aWxkRmluaXNoZWRPbiI6IjIwMjMtMDEtMTFUMjA6Mzc6NDkuOTc2NjEwWiIsImJ1aWxkSW52b2NhdGlvbklkIjoiYjYyYjAyNDItOTRmNi00MTY0LWI1ZTYtMjI4YTVkODRiOTVjIiwiYnVpbGRTdGFydGVkT24iOiIyMDIzLTAxLTExVDIwOjM3OjQxLjg0NjY2NjU4MVoifSwicmVjaXBlIjp7ImFyZ3VtZW50cyI6eyJAdHlwZSI6InR5cGUuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVpbGQiLCJpZCI6ImI2MmIwMjQyLTk0ZjYtNDE2NC1iNWU2LTIyOGE1ZDg0Yjk1YyIsIm5hbWUiOiJwcm9qZWN0cy8xMDY5MzE5OTAzMzUxL2xvY2F0aW9ucy91cy13ZXN0Mi9idWlsZHMvYjYyYjAyNDItOTRmNi00MTY0LWI1ZTYtMjI4YTVkODRiOTVjIiwib3B0aW9ucyI6eyJkeW5hbWljU3Vic3RpdHV0aW9ucyI6dHJ1ZSwibG9nZ2luZyI6IkxFR0FDWSIsInBvb2wiOnt9LCJyZXF1ZXN0ZWRWZXJpZnlPcHRpb24iOiJWRVJJRklFRCIsInN1YnN0aXR1dGlvbk9wdGlvbiI6IkFMTE9XX0xPT1NFIn0sInNvdXJjZVByb3ZlbmFuY2UiOnt9LCJzdGVwcyI6W3siYXJncyI6WyJidWlsZCIsIi10IiwidXMtd2VzdDItZG9ja2VyLnBrZy5kZXYvamlhbHUtdGVzdC1na2UtcG9saWN5L3F1aWNrc3RhcnQtZG9ja2VyLXJlcG8vcXVpY2tzdGFydC1pbWFnZTp0YWcxIiwiLiJdLCJuYW1lIjoiZ2NyLmlvL2Nsb3VkLWJ1aWxkZXJzL2RvY2tlciIsInB1bGxUaW1pbmciOnsiZW5kVGltZSI6IjIwMjMtMDEtMTFUMjA6Mzc6NDUuMDUxOTM0NDY4WiIsInN0YXJ0VGltZSI6IjIwMjMtMDEtMTFUMjA6Mzc6NDUuMDQ2OTA5MTEyWiJ9LCJzdGF0dXMiOiJTVUNDRVNTIiwidGltaW5nIjp7ImVuZFRpbWUiOiIyMDIzLTAxLTExVDIwOjM3OjQ3LjY0ODMyMTYzNFoiLCJzdGFydFRpbWUiOiIyMDIzLTAxLTExVDIwOjM3OjQ1LjA0NjkwOTExMloifX1dLCJzdWJzdGl0dXRpb25zIjp7IkJSQU5DSF9OQU1FIjoibWFpbiIsIkNPTU1JVF9TSEEiOiJiOTZlYjZhYTQyYjUzOWIzZWVmYzljOTMzMjQ2NWIwMDQ1Nzc1NWNkIiwiUkVGX05BTUUiOiJtYWluIiwiUkVQT19OQU1FIjoiZ2l0aHViLXRlc3QiLCJSRVZJU0lPTl9JRCI6ImI5NmViNmFhNDJiNTM5YjNlZWZjOWM5MzMyNDY1YjAwNDU3NzU1Y2QiLCJTSE9SVF9TSEEiOiJiOTZlYjZhIiwiVFJJR0dFUl9CVUlMRF9DT05GSUdfUEFUSCI6ImNsb3VkYnVpbGQueWFtbCIsIlRSSUdHRVJfTkFNRSI6IkdpdGh1Yi10cmlnZ2VyIn19LCJlbnRyeVBvaW50IjoiY2xvdWRidWlsZC55YW1sIiwidHlwZSI6Imh0dHBzOi8vY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9DbG91ZEJ1aWxkWWFtbEB2MC4xIn19LCJwcmVkaWNhdGVUeXBlIjoiaHR0cHM6Ly9zbHNhLmRldi9wcm92ZW5hbmNlL3YwLjEiLCJzbHNhUHJvdmVuYW5jZSI6eyJidWlsZGVyIjp7ImlkIjoiaHR0cHM6Ly9jbG91ZGJ1aWxkLmdvb2dsZWFwaXMuY29tL0dvb2dsZUhvc3RlZFdvcmtlckB2MC4zIn0sIm1hdGVyaWFscyI6W3siZGlnZXN0Ijp7InNoYTEiOiJiOTZlYjZhYTQyYjUzOWIzZWVmYzljOTMzMjQ2NWIwMDQ1Nzc1NWNkIn0sInVyaSI6Imh0dHBzOi8vZ2l0aHViLmNvbS9qaWFsdXIvZ2l0aHViLXRlc3QifV0sIm1ldGFkYXRhIjp7ImJ1aWxkRmluaXNoZWRPbiI6IjIwMjMtMDEtMTFUMjA6Mzc6NDkuOTc2NjEwWiIsImJ1aWxkSW52b2NhdGlvbklkIjoiYjYyYjAyNDItOTRmNi00MTY0LWI1ZTYtMjI4YTVkODRiOTVjIiwiYnVpbGRTdGFydGVkT24iOiIyMDIzLTAxLTExVDIwOjM3OjQxLjg0NjY2NjU4MVoifSwicmVjaXBlIjp7ImFyZ3VtZW50cyI6eyJAdHlwZSI6InR5cGUuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjEuQnVpbGQiLCJpZCI6ImI2MmIwMjQyLTk0ZjYtNDE2NC1iNWU2LTIyOGE1ZDg0Yjk1YyIsIm5hbWUiOiJwcm9qZWN0cy8xMDY5MzE5OTAzMzUxL2xvY2F0aW9ucy91cy13ZXN0Mi9idWlsZHMvYjYyYjAyNDItOTRmNi00MTY0LWI1ZTYtMjI4YTVkODRiOTVjIiwib3B0aW9ucyI6eyJkeW5hbWljU3Vic3RpdHV0aW9ucyI6dHJ1ZSwibG9nZ2luZyI6IkxFR0FDWSIsInBvb2wiOnt9LCJyZXF1ZXN0ZWRWZXJpZnlPcHRpb24iOiJWRVJJRklFRCIsInN1YnN0aXR1dGlvbk9wdGlvbiI6IkFMTE9XX0xPT1NFIn0sInNvdXJjZVByb3ZlbmFuY2UiOnt9LCJzdGVwcyI6W3siYXJncyI6WyJidWlsZCIsIi10IiwidXMtd2VzdDItZG9ja2VyLnBrZy5kZXYvamlhbHUtdGVzdC1na2UtcG9saWN5L3F1aWNrc3RhcnQtZG9ja2VyLXJlcG8vcXVpY2tzdGFydC1pbWFnZTp0YWcxIiwiLiJdLCJuYW1lIjoiZ2NyLmlvL2Nsb3VkLWJ1aWxkZXJzL2RvY2tlciIsInB1bGxUaW1pbmciOnsiZW5kVGltZSI6IjIwMjMtMDEtMTFUMjA6Mzc6NDUuMDUxOTM0NDY4WiIsInN0YXJ0VGltZSI6IjIwMjMtMDEtMTFUMjA6Mzc6NDUuMDQ2OTA5MTEyWiJ9LCJzdGF0dXMiOiJTVUNDRVNTIiwidGltaW5nIjp7ImVuZFRpbWUiOiIyMDIzLTAxLTExVDIwOjM3OjQ3LjY0ODMyMTYzNFoiLCJzdGFydFRpbWUiOiIyMDIzLTAxLTExVDIwOjM3OjQ1LjA0NjkwOTExMloifX1dLCJzdWJzdGl0dXRpb25zIjp7IkJSQU5DSF9OQU1FIjoibWFpbiIsIkNPTU1JVF9TSEEiOiJiOTZlYjZhYTQyYjUzOWIzZWVmYzljOTMzMjQ2NWIwMDQ1Nzc1NWNkIiwiUkVGX05BTUUiOiJtYWluIiwiUkVQT19OQU1FIjoiZ2l0aHViLXRlc3QiLCJSRVZJU0lPTl9JRCI6ImI5NmViNmFhNDJiNTM5YjNlZWZjOWM5MzMyNDY1YjAwNDU3NzU1Y2QiLCJTSE9SVF9TSEEiOiJiOTZlYjZhIiwiVFJJR0dFUl9CVUlMRF9DT05GSUdfUEFUSCI6ImNsb3VkYnVpbGQueWFtbCIsIlRSSUdHRVJfTkFNRSI6IkdpdGh1Yi10cmlnZ2VyIn19LCJlbnRyeVBvaW50IjoiY2xvdWRidWlsZC55YW1sIiwidHlwZSI6Imh0dHBzOi8vY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9DbG91ZEJ1aWxkWWFtbEB2MC4xIn19LCJzdWJqZWN0IjpbeyJkaWdlc3QiOnsic2hhMjU2IjoiNGRjNDIzYjVkZGRiOTFlYjY0MDBiYjNjYjEwNjc1ZTY3YzM5ZGE1NzdmNTE3ZWZiY2ZkOTM2OTJkNTQzYzMyNCJ9LCJuYW1lIjoiaHR0cHM6Ly91cy13ZXN0Mi1kb2NrZXIucGtnLmRldi9qaWFsdS10ZXN0LWdrZS1wb2xpY3kvcXVpY2tzdGFydC1kb2NrZXItcmVwby9xdWlja3N0YXJ0LWltYWdlOnRhZzEifV19
+      payloadType: application/vnd.in-toto+json
+      signatures:
+      - keyid: projects/verified-builder/locations/us-west2/keyRings/attestor/cryptoKeys/builtByGCB/cryptoKeyVersions/1
+        sig: MEQCIHIXbdDqhqKqv0ccl5YgojiEsLoVoZJRXBZ7HEbc6wu-AiB4vxeIb-2L7m1Sy_jMNVu9artMgQAkVsHnPCmZF8ZMxA==
+    kind: BUILD
+    name: projects/jialu-test-gke-policy/occurrences/e81fe5c0-8706-4e49-ae75-257107480492
+    noteName: projects/verified-builder/notes/intoto_b62b0242-94f6-4164-b5e6-228a5d84b95c
+    resourceUri: https://us-west2-docker.pkg.dev/jialu-test-gke-policy/quickstart-docker-repo/quickstart-image@sha256:4dc423b5dddb91eb6400bb3cb10675e67c39da577f517efbcfd93692d543c324
+    updateTime: '2023-01-11T20:37:52.310501Z'
